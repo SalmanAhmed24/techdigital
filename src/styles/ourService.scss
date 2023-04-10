@@ -1,0 +1,133 @@
+.our-services{
+    padding: 30px 65px;
+    background-color: #080809;
+        .info-wrap{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+                .text-wrap{
+                    width: 49%;
+                    min-width: 320px;
+                    max-width: 600px;
+                    .main-head{
+                        color: #fff;
+                        font-size: 72px;
+                        text-transform: uppercase;
+                        letter-spacing: -7px;
+                        font-weight: 600;
+                        span{
+                                color: red;
+                                display: inline-block;
+                                margin-left: 10px;
+                            }
+                    }
+                        p{
+                            font-size: 18px;
+                            color: #fff;
+                        }
+                }
+                .service-link-wrap{
+                    width: 49%;
+                    min-width: 320px;
+                    max-width: 500px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                        ul{
+                            list-style: none;
+                            display: flex;
+                            flex-wrap: wrap;
+                                .link{
+                                    color:#fff;
+                                    font-size: 18px;
+                                    margin-right: 20px;
+                                    margin-bottom: 20px;
+                                    padding: 10px 20px;
+                                    border: 1px solid #fff;
+                                    border-radius: 25px;
+                                    text-transform: uppercase;
+                                    transition: 0.3s ease-in;
+                                        &:hover{
+                                            background-color: #fff;
+                                            color: #000;
+                                            cursor: pointer;
+
+                                        }
+                                }
+                                .activeLink{
+                                    color:#000;
+                                    background: #fff;
+                                    font-size: 18px;
+                                    margin-right: 20px;
+                                    margin-bottom: 20px;
+                                    padding: 10px 20px;
+                                    border: 1px solid #fff;
+                                    border-radius: 25px;
+                                    text-transform: uppercase;
+                                }
+                        }
+                }
+        }
+}
+.innerService{
+    .service-list{
+        padding: 0px;
+        margin-top: 50px;
+        list-style: none;
+        .list-item{
+            display: flex;
+            transition: 0.3s ease-in-out;
+                justify-content: space-between;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+                padding: 20px 20px;
+                &:hover{
+                    color: #fff;
+                    background-color: rgba(255,255,255,0.05);
+                    cursor: pointer;
+                        svg{
+                            transform: rotate(50deg);
+                            color: #fff;
+                        }
+                        p{
+                            cursor: pointer;
+                            color: #fff;
+                                span{
+                                    opacity: 1;
+                                }
+                        }
+                }
+            p{
+                font-size: 42px;
+                color: rgba(255,255,255,0.3);
+                text-transform: uppercase;
+                letter-spacing: -2px;
+                margin-left: 50px;
+                transition: 0.3s ease-in-out;
+                // border-top: 1px solid rgba(255,255,255,0.1);
+                span{
+                    display: inline-block;
+                    transition: 0.3s ease-in-out;
+                    color: red;
+                    font-size: 102px;
+                    margin-bottom: 0px;
+                    line-height: 20px;
+                    opacity: 0;
+                }
+            }
+            svg{
+                font-size: 54px !important;
+                transform: rotate(0deg);
+                color: rgba(255,255,255,0.05);
+                transition: 0.3s ease-in-out;
+            }
+        }
+    }
+}
+@keyframes serviceAnimation {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

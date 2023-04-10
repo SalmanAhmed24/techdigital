@@ -1,0 +1,35 @@
+*{
+  font-family: 'Poppins', sans-serif;
+  padding: 0px;
+  margin: 0px;
+}
+html,body{
+  background-color: #080809;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+h1,h2{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;                       
+}
+$paddingMain:10px 45px;
+@mixin flexRowBasic{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@mixin flexColCenter{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@import './navbar.scss';
+@import './header.scss';
+@import './ourService.scss';
+@import './quote.scss';
+@import './projects.scss';
+@import './letsTalk.scss';
+@import './footer.scss';
+@import './drawer.scss';
