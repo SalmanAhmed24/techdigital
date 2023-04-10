@@ -9,7 +9,7 @@ function LetsTalk() {
       className="main-wrap-talk"
     >
       <section className="letsTalk-wrap">
-        <h1>Let's discuss your ideas</h1>
+        <h1>Let&apos;s discuss your ideas</h1>
         <div className="line"></div>
         <div className="contact-btn-wrap">
           <button>Contact US</button>
