@@ -1,18 +1,23 @@
 .top-bar{
-    background: #000;
+    background: rgba($color: #000000, $alpha: 0.05);
+    position: relative;
+    z-index: 23;
     padding: $paddingMain;
     padding-top: 20px;
     padding-bottom: 20px;
     @include flexRowBasic;
+    gap:30px;
         .logo-wrap{
+            align-self: center;
             @include flexColCenter;
-            width: 30%;
-            max-width: 200px;
+            
         }
         .links-wrap{
+            background-color: rgba($color: #000, $alpha: 0.6);
+            backdrop-filter: blur(5px);
+            border-radius:30px;
             @include flexColCenter;
-            width: 70%;
-            max-width: 600px;
+            
                 ul{
                     display: flex;
                     list-style: none;
@@ -25,4 +30,42 @@
                         }
                 }
         }
+}
+.lets-talk-btn-wrap{
+@include flexColCenter;
+    .lets-talk-btn{
+    background-color:#fff;
+    border-radius: 30px;
+    border:1px solid #fff;
+    color: #000;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 500;
+    padding: 5px 15px;
+    transition: 0.3s ease-in-out;
+    &:hover{
+        color: #fff;
+        background-color: #000;
+    }
+    }
+}
+.navbar-inner-links{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    padding: 5px 10px;
+    border: 1px solid rgba($color: #fff, $alpha: 0);
+    transition: 0.3s ease-in-out;
+    border-radius: 30px;
+    &:hover{
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    border: 1px solid rgba($color: #fff, $alpha: 0.2);
+    
+    }
+}
+.active-navbar-inner-links{
+    background-color: rgba($color: #000000, $alpha: 0.7);
+        border: 1px solid #fff;
+        border-radius: 30px;
+        padding: 5px 10px;
 }

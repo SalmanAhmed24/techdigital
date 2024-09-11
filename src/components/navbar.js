@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Logo from "../../public/logo-tech.svg";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 function Navbar() {
-  const handleNavbar = (e) => {
-    console.log(e.target.innerText);
-  };
+  const path = usePathname();
   const container = {
     hidden: { opacity: 1, scale: 0 },
     visible: {
@@ -36,38 +36,78 @@ function Navbar() {
         <Image src={Logo} alt="TechDigital.media" width={170} height={67} />
       </motion.section>
       <section className="links-wrap">
-        <motion.ul
-          onClick={handleNavbar}
-          variants={container}
-          initial="hidden"
-          animate="visible"
-        >
+        <motion.ul variants={container} initial="hidden" animate="visible">
           <motion.li
             variants={item}
             transition={{ ease: "easeOut", duration: 1 }}
           >
-            About Us
+            <Link
+              href={"/"}
+              className={
+                path == "/"
+                  ? "navbar-inner-links active-navbar-inner-links"
+                  : `navbar-inner-links`
+              }
+            >
+              Home
+            </Link>
+          </motion.li>
+          <motion.li
+            variants={item}
+            transition={{ ease: "easeOut", duration: 1 }}
+          >
+            <Link
+              href={"/about"}
+              className={
+                path == "/about"
+                  ? "navbar-inner-links active-navbar-inner-links"
+                  : `navbar-inner-links`
+              }
+            >
+              About Us
+            </Link>
           </motion.li>
           <motion.li
             variants={item}
             transition={{ ease: "easeInOut", duration: 1.1 }}
           >
-            Project
+            <Link
+              href={"/projects"}
+              className={
+                path == "/projects"
+                  ? "navbar-inner-links active-navbar-inner-links"
+                  : `navbar-inner-links`
+              }
+            >
+              Projects
+            </Link>
           </motion.li>
           <motion.li
             variants={item}
             transition={{ ease: "easeInOut", duration: 1.2 }}
           >
-            Service
-          </motion.li>
-          <motion.li
-            variants={item}
-            transition={{ ease: "easeInOut", duration: 1.3 }}
-          >
-            Let&apos;s Talk
+            <Link
+              href={"/services"}
+              className={
+                path == "/services"
+                  ? "navbar-inner-links active-navbar-inner-links"
+                  : `navbar-inner-links`
+              }
+            >
+              Services
+            </Link>
           </motion.li>
         </motion.ul>
       </section>
+      <motion.section
+        variants={item}
+        transition={{ ease: "easeInOut", duration: 1.4 }}
+        className="lets-talk-btn-wrap"
+      >
+        <Link href={"/contact"} className="lets-talk-btn">
+          Let's Talk
+        </Link>
+      </motion.section>
     </nav>
   );
 }

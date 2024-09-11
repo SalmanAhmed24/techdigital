@@ -19,6 +19,12 @@ $paddingMain:10px 45px;
   flex-wrap: wrap;
   justify-content: space-between;
 }
+@mixin flexRowCenter{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 @mixin flexColCenter{
   display: flex;
   flex-direction: column;
