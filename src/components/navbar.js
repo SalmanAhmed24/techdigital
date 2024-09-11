@@ -105,7 +105,7 @@ function Navbar() {
         className="lets-talk-btn-wrap"
       >
         <Link href={"/contact"} className="lets-talk-btn">
-          Let's Talk
+          Let&apos;s Talk
         </Link>
       </motion.section>
     </nav>
