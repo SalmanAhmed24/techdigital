@@ -1,6 +1,8 @@
+import AboutUsComp from "@/components/about-us";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import LetsTalk from "@/components/letsTalk";
+import OurServicesComp from "@/components/our-service";
 import OurServices from "@/components/ourServices";
 import Projects from "@/components/projects";
 import Quote from "@/components/qoute";
@@ -22,7 +24,8 @@ export default function Home() {
       ></Script>
       <main>
         <Header />
-        <OurServices />
+        <AboutUsComp />
+        <OurServicesComp />
         <Quote />
         <Projects />
         <LetsTalk />
